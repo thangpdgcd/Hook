@@ -1,10 +1,24 @@
 import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(1);
+const App = () => {
+  //useState (cập nhật lại giá trị mới)
+  const [num, setnum] = useState(1);
 
-  return <>
-  </>;
-}
+  const handleAdd = () => {
+    setnum(num + 1);
+    console.log("render");
+  };
+
+  return (
+    <>
+      <div className="App">
+        <h2>{num}</h2>
+        <button className="btn-main" onClick={handleAdd}>
+          add
+        </button>
+      </div>
+    </>
+  );
+};
 
 export default App;
